@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsmtUI", "AsmtUI\AsmtUI.csproj", "{C1CA57E3-8B3F-4C3C-BF5C-17C93742BB62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsmtLib", "AsmtLib\AsmtLib.csproj", "{71377725-C0E0-4983-825A-7E1769E37FBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1CA57E3-8B3F-4C3C-BF5C-17C93742BB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1CA57E3-8B3F-4C3C-BF5C-17C93742BB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1CA57E3-8B3F-4C3C-BF5C-17C93742BB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1CA57E3-8B3F-4C3C-BF5C-17C93742BB62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71377725-C0E0-4983-825A-7E1769E37FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71377725-C0E0-4983-825A-7E1769E37FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71377725-C0E0-4983-825A-7E1769E37FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71377725-C0E0-4983-825A-7E1769E37FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

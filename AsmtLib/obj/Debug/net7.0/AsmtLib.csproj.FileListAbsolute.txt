@@ -1,0 +1,12 @@
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\bin\Debug\net7.0\AsmtLib.deps.json
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\bin\Debug\net7.0\AsmtLib.dll
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\bin\Debug\net7.0\AsmtLib.pdb
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\obj\Debug\net7.0\AsmtLib.csproj.AssemblyReference.cache
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\obj\Debug\net7.0\AsmtLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\obj\Debug\net7.0\AsmtLib.AssemblyInfoInputs.cache
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\obj\Debug\net7.0\AsmtLib.AssemblyInfo.cs
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\obj\Debug\net7.0\AsmtLib.csproj.CoreCompileInputs.cache
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\obj\Debug\net7.0\AsmtLib.dll
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\obj\Debug\net7.0\refint\AsmtLib.dll
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\obj\Debug\net7.0\AsmtLib.pdb
+C:\Users\gbemi\Desktop\C#-Assessments-2\AsmtLib\obj\Debug\net7.0\ref\AsmtLib.dll
