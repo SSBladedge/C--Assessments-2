@@ -15,7 +15,8 @@ namespace AsmtLib
             {
                 var numArray = GetNumArray(num);
 
-                string text = FirstLevelText(numArray);
+                string text = SecondLevelText(numArray);
+
                 Console.WriteLine(text);
             }
         }
@@ -58,7 +59,7 @@ namespace AsmtLib
             return numList.ToArray();
         }
 
-        private static string FirstLevelText(int[] numArray)                    //NOTE: ONLY 3 VALUE ARRAYS ARE ALLOWED IN HERE !!!!!!
+        private static string FirstLevelText(int[] numArray)
         {
             string textValue = "";
             Dictionary<int, string> singleDigit = new Dictionary<int, string>()
@@ -117,7 +118,22 @@ namespace AsmtLib
             }
         }
 
-        private static void SecondLevelText() { } //input and return values not yet determined
+        private static string SecondLevelText(int[] numArray)
+        {
+            string finalWord = "";
+            string[] magnitudes = { "", " THOUSAND, ", " MILLION, ", " BILLION, ", " TRILLION, " };
 
+            for (int i = numArray.Length; i > 0; i--)
+            {
+                int[] values = { numArray[i - 1], numArray[i - 2], numArray[i - 3] };
+                string words = FirstLevelText(values);
+                string unit = magnitudes[(i / 3) - 1];
+
+                finalWord = string.Concat(finalWord, words + unit);
+                i -= 2;
+            }
+
+            return finalWord;
+        }
     }
 }
