@@ -15,10 +15,8 @@ namespace AsmtLib
             {
                 var numArray = GetNumArray(num);
 
-                foreach (int item in numArray)
-                {
-                    Console.WriteLine(item);
-                }
+                string text = FirstLevelText(numArray);
+                Console.WriteLine(text);
             }
         }
 
@@ -53,26 +51,73 @@ namespace AsmtLib
                 num = num / 10;
             }
             numList.Reverse();
+
+            while (numList.Count % 3 != 0)
+                numList.Insert(0, 0);
+
             return numList.ToArray();
         }
 
-        private static void FirstLevelText(int[] numArray)                    //NOTE: ONLY 3 VALUE ARRAYS ARE ALLOWED IN HERE !!!!!!
+        private static string FirstLevelText(int[] numArray)                    //NOTE: ONLY 3 VALUE ARRAYS ARE ALLOWED IN HERE !!!!!!
         {
-            Dictionary<int, string> firstStage = new Dictionary<int, string>()
+            string textValue = "";
+            Dictionary<int, string> singleDigit = new Dictionary<int, string>()
             {
                 {1, "ONE"}, {2, "TWO"}, {3, "THREE"}, {4, "FOUR"}, {5, "FIVE"},
-                {6, "SIX"}, {7, "SEVEN"}, {8, "EIGHT"}, {9, "NINE"}, {10, "TEN"},
-                {11, "ELEVEN"}, {12, "TWELVE"}, {13, "THIRTEEN"}, {14, "FOURTEEN"}, {15, "FIFTEEN"},
-                {16, "SIXTEEN"}, {17, "SEVENTEEN"}, {18, "EIGHTEEN"}, {19, "NINETEEN"}
+                {6, "SIX"}, {7, "SEVEN"}, {8, "EIGHT"}, {9, "NINE"}
             };
 
-            Dictionary<int, string> secondStage = new Dictionary<int, string>()
+            Dictionary<int, string> doubleDigit = new Dictionary<int, string>()
             {
-                {20, "TWENTY"}, {30, "THIRTY"}, {40, "FORTY"}, {50, "FIFTY"}, {60, "SIXTY"},
-                {70, "SEVENTY"}, {80, "EIGHTY"}, {90, "NINTY"}
+                {1, "TEN"}, {2, "TWENTY"}, {3, "THIRTY"}, {4, "FORTY"}, {5, "FIFTY"},
+                {6, "SIXTY"}, {7, "SEVENTY"}, {8, "EIGHTY"}, {9, "NINTY"}
             };
+
+            Dictionary<int, string> exceptions = new Dictionary<int, string>()
+            {
+                {1, "ELEVEN"}, {2, "TWELVE"}, {3, "THIRTEEN"}, {4, "FOURTEEN"}, {5, "FIFTEEN"},
+                {6, "SIXTEEN"}, {7, "SEVENTEEN"}, {8, "EIGHTEEN"}, {9, "NINETEEN"}
+            };
+
+            if (numArray[0] != 0)                                                   //NOTE: EMPTY SPACES ARE ASSUMED TO BE ZEROES
+            {
+                textValue = string.Concat(textValue, singleDigit[numArray[0]] + " HUNDRED");
+
+                if (numArray[1] != 0 || numArray[2] != 0)
+                {
+                    textValue = string.Concat(textValue, " AND ");
+                }
+
+                else
+                    return textValue;
+            }
+
+            if (numArray[1] == 1 && numArray[2] != 0)
+            {
+                textValue = string.Concat(textValue, exceptions[numArray[2]]);
+                return textValue;
+            }
+
+            else if (numArray[1] != 0)
+            {
+                textValue = string.Concat(textValue, doubleDigit[numArray[1]]);
+                if (numArray[2] == 0)
+                    return textValue;
+                else
+                {
+                    textValue = string.Concat(textValue, " " + singleDigit[numArray[2]]);
+                    return textValue;
+                }
+            }
+
+            else
+            {
+                textValue = string.Concat(textValue, singleDigit[numArray[2]]);
+                return textValue;
+            }
         }
 
         private static void SecondLevelText() { } //input and return values not yet determined
+
     }
 }
