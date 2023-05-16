@@ -1,5 +1,5 @@
 
-
+//ASK ISAAC ABOUT POSSIBLE GLOBAL SOLUTION
 
 namespace AsmtLib
 {
@@ -111,6 +111,11 @@ namespace AsmtLib
                 }
             }
 
+            else if (numArray[0] == 0 && numArray[1] == 0 && numArray[2] == 0)
+            {
+                return textValue;
+            }
+
             else
             {
                 textValue = string.Concat(textValue, singleDigit[numArray[2]]);
@@ -121,19 +126,29 @@ namespace AsmtLib
         private static string SecondLevelText(int[] numArray)
         {
             string finalWord = "";
-            string[] magnitudes = { "", " THOUSAND, ", " MILLION, ", " BILLION, ", " TRILLION, " };
+            string[] magnitudes = { "", " THOUSAND ", " MILLION ", " BILLION ", " TRILLION " };
+            int j = (numArray.Length / 3) - 1;
 
-            for (int i = numArray.Length; i > 0; i--)
+            for (int i = 0; i < numArray.Length; i += 3)
             {
-                int[] values = { numArray[i - 1], numArray[i - 2], numArray[i - 3] };
+                int[] values = { numArray[i], numArray[i + 1], numArray[i + 2] };
                 string words = FirstLevelText(values);
-                string unit = magnitudes[(i / 3) - 1];
+
+
+                string unit = magnitudes[j - (i / 3)];
 
                 finalWord = string.Concat(finalWord, words + unit);
-                i -= 2;
             }
 
             return finalWord;
         }
+
+
+        //Write a program to Register students, and also retrieve the students data by their IDs.  Use text file as your database.
+
+
+
     }
+
+
 }
