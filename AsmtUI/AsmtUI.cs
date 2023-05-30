@@ -35,9 +35,10 @@ namespace AssessmentUI
 
         private static void UI()
         {
-            string[] tasks = new string[1]
+            string[] tasks = new string[2]
             {
                 "Number to text",
+                "Student Records"
             };
 
             Console.WriteLine("Please select from the available options below:");
@@ -58,6 +59,18 @@ namespace AssessmentUI
                 Lib.NumToTxt();
                 ReDo();
             }
+            else if (choice == "2")
+            {
+                Console.Clear();
+                Lib.StudentRecords();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Please select 1, 2, or 3 from the options");
+                Console.WriteLine("");
+                ReDo();
+            }
         }
 
         private static void ReDo()
@@ -76,7 +89,9 @@ namespace AssessmentUI
                 Console.Clear();
                 Console.WriteLine("Thank you for your time");
             }
-
         }
     }
 }
+
+
+
