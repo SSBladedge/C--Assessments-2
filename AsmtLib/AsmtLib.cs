@@ -59,7 +59,7 @@ namespace AsmtLib
             return numList.ToArray();
         }
 
-        private static string FirstLevelText(int[] numArray)                   //Only deals wit 3 digits
+        private static string FirstLevelText(int[] numArray)
         {
             string textValue = "";
             Dictionary<int, string> singleDigit = new Dictionary<int, string>()
@@ -217,6 +217,7 @@ namespace AsmtLib
                     Console.WriteLine("-----------------------------------------------");
                     Console.WriteLine("-----------------------------------------------");
                 }
+                ReDo();
             }
             else if (intChoice == 2)
             {
@@ -229,8 +230,6 @@ namespace AsmtLib
                 string id = GenerateFiveDigitNumber();
 
                 Student newStudent = new Student(lastName!, firstName!, id);
-
-                studentRecords.Append(newStudent);
 
                 StoreData(newStudent);
 
@@ -349,3 +348,32 @@ namespace AsmtLib
     //DOTNET 7 IS USED 
 }
 
+
+
+//Model - OOP 
+//class ***
+//.... 
+
+//Controller - Methods 
+//class : controllerbase 
+//Database query
+
+//Data - data 
+// class : dboptions
+
+//Migration - generated 
+
+
+
+//Craete an API for a school (Divinity Highschool)
+//API should register and manage students in a database 
+
+// An api for a school.
+// Divinity college
+// Apis to register and manage students.
+// The students records will be housed on a db
+// There will be a table for student records. Things like firstname, lastname, dob,address, class assigned - grade 10 to 12, class teachers name.
+// Api to get all students
+// Api to get students by grade eg grade 10 to 12.
+// Api to get an individual student
+// Api to register students with the ppts
